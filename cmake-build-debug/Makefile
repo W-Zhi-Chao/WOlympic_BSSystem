@@ -201,6 +201,30 @@ SQL.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/SQL.cpp.s
 .PHONY : SQL.cpp.s
 
+User.o: User.cpp.o
+.PHONY : User.o
+
+# target to build an object file
+User.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/User.cpp.o
+.PHONY : User.cpp.o
+
+User.i: User.cpp.i
+.PHONY : User.i
+
+# target to preprocess a source file
+User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/User.cpp.i
+.PHONY : User.cpp.i
+
+User.s: User.cpp.s
+.PHONY : User.s
+
+# target to generate assembly for a file
+User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/User.cpp.s
+.PHONY : User.cpp.s
+
 calculator.o: calculator.cpp.o
 .PHONY : calculator.o
 
@@ -291,6 +315,9 @@ help:
 	@echo "... SQL.o"
 	@echo "... SQL.i"
 	@echo "... SQL.s"
+	@echo "... User.o"
+	@echo "... User.i"
+	@echo "... User.s"
 	@echo "... calculator.o"
 	@echo "... calculator.i"
 	@echo "... calculator.s"

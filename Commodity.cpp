@@ -29,6 +29,7 @@ void Commodity::Read() {
 void Commodity::Write(){
     ofstream fs;
     fs.open(target);
+    assert(fs.is_open() && "文件打开失败");
     fs<<head<<endl;
     for(int i=0; i<num; i++){
         char *ptr=(char*)&commodity[i];
@@ -93,7 +94,7 @@ void Commodity::Delete(string &value, string &attribute, int identity) {
     else compare = com_map[attribute];
     for(int i = 0;i<num;i++){
         char *ptr = (char*)&commodity[i];
-        if(compare==-1|| is_substr(value,ptr+compare)) {
+        if(compare==-1|| value==ptr+compare) {
             ptr+=com_map["商品状态"];
             if(!strcmp("已下架",ptr)) continue;
             flag=true;
@@ -111,7 +112,7 @@ void Commodity::Update(string &value, string &attribute, string &set, int identi
     vector<string> res = split(set,",");
     for(int i = 0;i<num;i++){
         char *ptr = (char*)&commodity[i];
-        if(compare==-1|| is_substr(value,ptr+compare)) {
+        if(compare==-1|| value==ptr+compare) {
             //if(!strcmp("已下架",ptr+com_map["商品状态"])) continue;
             flag=true;
             for(auto j=res.begin(); j!=res.end(); j++){

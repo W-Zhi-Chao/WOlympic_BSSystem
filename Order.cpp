@@ -28,6 +28,7 @@ void Order::Read() {
 void Order::Write(){
     ofstream fs;
     fs.open(target);
+    assert(fs.is_open() && "文件打开失败");
     fs<<head<<endl;
     for(int i=0; i<num; i++){
         char *ptr=(char*)&order[i];

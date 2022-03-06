@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.o.d"
   "CMakeFiles/WOlympic_BSSystem.dir/SQL.cpp.o"
   "CMakeFiles/WOlympic_BSSystem.dir/SQL.cpp.o.d"
+  "CMakeFiles/WOlympic_BSSystem.dir/User.cpp.o"
+  "CMakeFiles/WOlympic_BSSystem.dir/User.cpp.o.d"
   "CMakeFiles/WOlympic_BSSystem.dir/calculator.cpp.o"
   "CMakeFiles/WOlympic_BSSystem.dir/calculator.cpp.o.d"
   "CMakeFiles/WOlympic_BSSystem.dir/core.cpp.o"

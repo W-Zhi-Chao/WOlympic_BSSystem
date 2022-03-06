@@ -10,10 +10,21 @@ class SQL{
      * */
 public:
     bool suc;   // SQL_STATE
+    ofstream history;
     SQL(){
         suc=true;
     }
+    inline void Init(){
+        char dir[256];
+        strcpy(dir,pwd);
+        strcat(dir,"commands.txt");
+        history.open(dir,ios::out | ios::app);
+    }
+    inline void Exit(){
+        history.close();
+    }
     void read(string &cmd,int identity);   // cmd check and call corresponding function
+    inline void Log(string &cmd);
     // SELECT * FROM name WHERE column CONTAINS value
     void SELECT(string &name, string &value, string &attribute, int identity);
     // UPDATE name SET column=value1,column2=value2, ··· WHERE column=value

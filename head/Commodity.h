@@ -26,8 +26,8 @@ public:
         commodity = new s_commodity[100];
         head="商品ID,名称,价格,数量,描述,卖家ID,上架时间,商品状态";
         num=0;
-        com_map["ID"]=0;
-        com_map["名称"]=com_map["ID"]+com_table[0];
+        com_map["商品ID"]=0;
+        com_map["名称"]=com_map["商品ID"]+com_table[0];
         com_map["价格"]=com_map["名称"]+com_table[1];
         com_map["数量"]=com_map["价格"]+com_table[2];
         com_map["描述"]=com_map["数量"]+com_table[3];
