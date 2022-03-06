@@ -1,0 +1,3 @@
+/Users/wzc/Desktop/study/Code/C++/WOlympic_BSSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wzc/Desktop/study/Code/C++/WOlympic_BSSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wzc/Desktop/study/Code/C++/WOlympic_BSSystem/cmake-build-debug/CMakeFiles/WOlympic_BSSystem.dir

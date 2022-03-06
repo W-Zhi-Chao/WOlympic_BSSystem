@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/local/bin/gcc-11 -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-11 -G "CodeBlocks - Unix Makefiles" /Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/wzc/Desktop/study/Code/C++/WOlympic_BSSystem/cmake-build-debug
