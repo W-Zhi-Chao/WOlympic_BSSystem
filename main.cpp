@@ -2,11 +2,12 @@
 #include "head/calculator.h"
 #include "head/SQL.h"
 #include "head/Commodity.h"
-
+#include "head/Order.h"
 #include <unistd.h>
 #include <time.h>
 using namespace std;
 Commodity com=Commodity();
+Order ord=Order();
 char pwd[256];
 char date[16];
 char TIME[16];
@@ -25,7 +26,9 @@ int main() {
     update_time();
     com.Init();
     SQL a;
-    string cmd = "DELETE FROM commodity WHERE 商品ID=M001";
+    string cmd = "UPDATE commodity SET 商品状态=销售中 WHERE 商品ID=M001";
+    a.read(cmd,0);
+    cmd = "SELECT * FROM commodity";
     a.read(cmd,0);
     com.Exit();
 //    auto *A=new calculator;

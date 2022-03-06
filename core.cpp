@@ -1,4 +1,10 @@
 #include "head/core.h"
+//string substr(string &str,string::size_type begin,string::size_type n){
+//    cout<<"?"<<endl;
+//    string tem = str.substr(begin,n);
+//    tem.erase(tem.end());
+//    return tem;
+//}
 vector<string> split(string &str, string pattern){
     string::size_type pos;
     vector<std::string> result;

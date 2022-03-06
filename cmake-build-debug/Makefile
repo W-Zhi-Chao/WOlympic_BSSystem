@@ -153,6 +153,30 @@ Commodity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/Commodity.cpp.s
 .PHONY : Commodity.cpp.s
 
+Order.o: Order.cpp.o
+.PHONY : Order.o
+
+# target to build an object file
+Order.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.o
+.PHONY : Order.cpp.o
+
+Order.i: Order.cpp.i
+.PHONY : Order.i
+
+# target to preprocess a source file
+Order.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.i
+.PHONY : Order.cpp.i
+
+Order.s: Order.cpp.s
+.PHONY : Order.s
+
+# target to generate assembly for a file
+Order.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.s
+.PHONY : Order.cpp.s
+
 SQL.o: SQL.cpp.o
 .PHONY : SQL.o
 
@@ -261,6 +285,9 @@ help:
 	@echo "... Commodity.o"
 	@echo "... Commodity.i"
 	@echo "... Commodity.s"
+	@echo "... Order.o"
+	@echo "... Order.i"
+	@echo "... Order.s"
 	@echo "... SQL.o"
 	@echo "... SQL.i"
 	@echo "... SQL.s"

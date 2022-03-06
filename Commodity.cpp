@@ -41,6 +41,17 @@ void Commodity::Write(){
     }
     fs.close();
 }
+void Commodity::Printhead() {
+    int j;
+    vector<string> h = split(head,",");
+    for(int i=0; i<COM_NUM;i++) {
+        if(i==4) continue;
+        j = com_print_table[i] - len(h.at(i).c_str());
+        printf("%s",h.at(i).c_str());
+        for(; j > 0; j--) printf(" ");
+    }
+    cout<<endl;
+}
 void Commodity::Insert(string &value, int identity) {
     vector<string> res = split(value,",");
     char *ptr = (char*)&commodity[num];
@@ -56,13 +67,7 @@ void Commodity::Select(string &value, string &attribute, int identity) {
     if(attribute=="") compare = -1;
     else compare = com_map[attribute];
     vector<string> h = split(head,",");
-    for(int i=0; i<COM_NUM;i++) {
-        if(i==4) continue;
-        j = com_print_table[i] - len(h.at(i).c_str());
-        printf("%s",h.at(i).c_str());
-        for(; j > 0; j--) printf(" ");
-    }
-    cout<<endl;
+    Printhead();
 //    printf("商品ID   名称          价格         数量   卖家ID       上架时间     商品状态\n");
     for(int i = 0;i<num;i++){
         char *ptr = (char*)&commodity[i];
@@ -98,4 +103,25 @@ void Commodity::Delete(string &value, string &attribute, int identity) {
     if(!flag) cout<<"没有对应商品!"<<endl;
     else cout<<"商品下架成功!"<<endl;
 }
-void Commodity
+void Commodity::Update(string &value, string &attribute, string &set, int identity) {
+    int compare;
+    bool flag= false;
+    if(attribute=="") compare = -1;
+    else compare = com_map[attribute];
+    vector<string> res = split(set,",");
+    for(int i = 0;i<num;i++){
+        char *ptr = (char*)&commodity[i];
+        if(compare==-1|| is_substr(value,ptr+compare)) {
+            //if(!strcmp("已下架",ptr+com_map["商品状态"])) continue;
+            flag=true;
+            for(auto j=res.begin(); j!=res.end(); j++){
+                string::size_type pos = j->find("=");
+                string tem1 = j->substr(0,pos);
+                string tem2 = j->substr(pos+1);
+                strcpy(ptr+com_map[tem1],tem2.c_str());
+            }
+        }
+    }
+    if(!flag) cout<<"没有对应商品!"<<endl;
+    else cout<<"商品更新成功!"<<endl;
+}

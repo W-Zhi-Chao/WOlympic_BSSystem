@@ -49,9 +49,10 @@ public:
     }
     void Read();
     void Write();
+    void Printhead();
     void Insert(string &value,int identity);
     void Select(string &value, string &attribute, int identity);
     void Delete(string &value, string &attribute, int identity);
-    void Update(string &value, string &attribute, string &set);
+    void Update(string &value, string &attribute, string &set, int identity);
 };
 #endif

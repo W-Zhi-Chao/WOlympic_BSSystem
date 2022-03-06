@@ -85,6 +85,9 @@
 		<Unit filename="/Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/Commodity.cpp">
 			<Option target="WOlympic_BSSystem"/>
 		</Unit>
+		<Unit filename="/Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/Order.cpp">
+			<Option target="WOlympic_BSSystem"/>
+		</Unit>
 		<Unit filename="/Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/SQL.cpp">
 			<Option target="WOlympic_BSSystem"/>
 		</Unit>
