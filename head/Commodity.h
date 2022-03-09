@@ -4,13 +4,13 @@
 #include<map>
 extern char pwd[256];
 const int com_table[COM_NUM]={5,20,10,10,100,10,12,10};
-const int com_print_table[COM_NUM]={8,15,12,7,100,10,14,10};
+const int com_print_table[COM_NUM]={8,15,12,10,100,10,14,10};
 typedef struct{
     char ID[5];   // ID
     char Name[20]; // 名称
     char price[10]; // 价格
-    char number[100]; // 数量
-    char description[10]; // 描述
+    char number[10]; // 数量
+    char description[100]; // 描述
     char sellerID[10]; // 卖家ID
     char addedDate[12]; // 上架时间
     char state[10]; // 商品状态
@@ -20,8 +20,8 @@ public:
     s_commodity *commodity;
     char target[256];
     string head;
-    int num;
     map<string,int> com_map;
+    int num;
     Commodity() {
         commodity = new s_commodity[100];
         head="商品ID,名称,价格,数量,描述,卖家ID,上架时间,商品状态";
@@ -49,10 +49,12 @@ public:
     }
     void Read();
     void Write();
-    void Printhead();
+    void Printhead(int identity);
     void Insert(string &value,int identity);
-    void Select(string &value, string &attribute, int identity);
+    bool Select(string &value, string &attribute, int identity);
     void Delete(string &value, string &attribute, int identity);
     void Update(string &value, string &attribute, string &set, int identity);
+    int Find(const char *ID);
+    int Find_Seller(const char *ID);
 };
 #endif

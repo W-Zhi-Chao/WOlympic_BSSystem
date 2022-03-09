@@ -5,7 +5,7 @@
 #include"core.h"
 extern char pwd[256];
 const int use_table[USE_NUM]={5,10,20,20,20,10,10};
-const int use_print_table[USE_NUM]={8,12,12,12,12,12,12};
+const int use_print_table[USE_NUM]={8,12,20,20,20,12,12};
 typedef struct{
     char userID[5];   // 用户ID
     char userName[10]; // 用户名
@@ -20,8 +20,8 @@ public:
     s_user *user;
     char target[256];
     string head;
-    int num;
     map<string,int> use_map;
+    int num;
     User() {
         user = new s_user[100];
         head="用户ID,用户名,密码,联系方式,地址,钱包余额,用户状态";
@@ -38,7 +38,7 @@ public:
     ~User(){
         delete []user;
     }
-    inline void Init(){
+    void Init(){
         strcpy(target,pwd);
         strcat(target,"user.txt");
         Read();
@@ -48,10 +48,11 @@ public:
     }
     void Read();
     void Write();
-    void Printhead();
+    void Printhead(int identity);
     void Insert(string &value,int identity);
-    void Select(string &value, string &attribute, int identity);
+    bool Select(string &value, string &attribute, int identity);
     void Delete(string &value, string &attribute, int identity);
     void Update(string &value, string &attribute, string &set, int identity);
+    int Find(const char* name);
 };
 #endif

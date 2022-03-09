@@ -6,6 +6,7 @@
 extern char pwd[256];
 const int ord_table[ORD_NUM]={5,5,10,10,12,5,5};
 const int ord_print_table[ORD_NUM]={8,8,12,8,14,8,8};
+
 typedef struct{
     char orderID[5];   // 订单ID
     char comID[5]; // 商品ID
@@ -20,8 +21,8 @@ public:
     s_order *order;
     char target[256];
     string head;
-    int num;
     map<string,int> ord_map;
+    int num;
     Order() {
         order = new s_order[100];
         head="订单ID,商品ID,交易单价,数量,交易时间,卖家ID,买家ID";
@@ -38,7 +39,7 @@ public:
     ~Order(){
         delete []order;
     }
-    inline void Init(){
+    void Init(){
         strcpy(target,pwd);
         strcat(target,"order.txt");
         Read();
@@ -48,11 +49,9 @@ public:
     }
     void Read();
     void Write();
-    void Printhead();
+    void Printhead(int identity);
     void Insert(string &value,int identity);
-    void Select(string &value, string &attribute, int identity);
-    void Delete(string &value, string &attribute, int identity);
-    void Update(string &value, string &attribute, string &set, int identity);
+    bool Select(string &value, string &attribute, int identity);
 };
 #endif
 

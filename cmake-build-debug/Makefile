@@ -129,6 +129,30 @@ WOlympic_BSSystem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/build
 .PHONY : WOlympic_BSSystem/fast
 
+Administrator.o: Administrator.cpp.o
+.PHONY : Administrator.o
+
+# target to build an object file
+Administrator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o
+.PHONY : Administrator.cpp.o
+
+Administrator.i: Administrator.cpp.i
+.PHONY : Administrator.i
+
+# target to preprocess a source file
+Administrator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.i
+.PHONY : Administrator.cpp.i
+
+Administrator.s: Administrator.cpp.s
+.PHONY : Administrator.s
+
+# target to generate assembly for a file
+Administrator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.s
+.PHONY : Administrator.cpp.s
+
 Commodity.o: Commodity.cpp.o
 .PHONY : Commodity.o
 
@@ -176,6 +200,30 @@ Order.s: Order.cpp.s
 Order.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.s
 .PHONY : Order.cpp.s
+
+People.o: People.cpp.o
+.PHONY : People.o
+
+# target to build an object file
+People.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o
+.PHONY : People.cpp.o
+
+People.i: People.cpp.i
+.PHONY : People.i
+
+# target to preprocess a source file
+People.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/People.cpp.i
+.PHONY : People.cpp.i
+
+People.s: People.cpp.s
+.PHONY : People.s
+
+# target to generate assembly for a file
+People.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WOlympic_BSSystem.dir/build.make CMakeFiles/WOlympic_BSSystem.dir/People.cpp.s
+.PHONY : People.cpp.s
 
 SQL.o: SQL.cpp.o
 .PHONY : SQL.o
@@ -306,12 +354,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... WOlympic_BSSystem"
+	@echo "... Administrator.o"
+	@echo "... Administrator.i"
+	@echo "... Administrator.s"
 	@echo "... Commodity.o"
 	@echo "... Commodity.i"
 	@echo "... Commodity.s"
 	@echo "... Order.o"
 	@echo "... Order.i"
 	@echo "... Order.s"
+	@echo "... People.o"
+	@echo "... People.i"
+	@echo "... People.s"
 	@echo "... SQL.o"
 	@echo "... SQL.i"
 	@echo "... SQL.s"

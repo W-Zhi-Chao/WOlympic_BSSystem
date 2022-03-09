@@ -167,6 +167,34 @@ CMakeFiles/WOlympic_BSSystem.dir/User.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WOlympic_BSSystem.dir/User.cpp.s"
 	/usr/local/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/User.cpp -o CMakeFiles/WOlympic_BSSystem.dir/User.cpp.s
 
+CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o: CMakeFiles/WOlympic_BSSystem.dir/flags.make
+CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o: ../People.cpp
+CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o: CMakeFiles/WOlympic_BSSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wzc/Desktop/study/Code/C++/WOlympic_BSSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o"
+	/usr/local/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o -MF CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o.d -o CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o -c /Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/People.cpp
+
+CMakeFiles/WOlympic_BSSystem.dir/People.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WOlympic_BSSystem.dir/People.cpp.i"
+	/usr/local/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/People.cpp > CMakeFiles/WOlympic_BSSystem.dir/People.cpp.i
+
+CMakeFiles/WOlympic_BSSystem.dir/People.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WOlympic_BSSystem.dir/People.cpp.s"
+	/usr/local/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/People.cpp -o CMakeFiles/WOlympic_BSSystem.dir/People.cpp.s
+
+CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o: CMakeFiles/WOlympic_BSSystem.dir/flags.make
+CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o: ../Administrator.cpp
+CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o: CMakeFiles/WOlympic_BSSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wzc/Desktop/study/Code/C++/WOlympic_BSSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o"
+	/usr/local/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o -MF CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o.d -o CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o -c /Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/Administrator.cpp
+
+CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.i"
+	/usr/local/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/Administrator.cpp > CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.i
+
+CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.s"
+	/usr/local/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wzc/Desktop/study/code/C++/WOlympic_BSSystem/Administrator.cpp -o CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.s
+
 # Object files for target WOlympic_BSSystem
 WOlympic_BSSystem_OBJECTS = \
 "CMakeFiles/WOlympic_BSSystem.dir/SQL.cpp.o" \
@@ -175,7 +203,9 @@ WOlympic_BSSystem_OBJECTS = \
 "CMakeFiles/WOlympic_BSSystem.dir/Commodity.cpp.o" \
 "CMakeFiles/WOlympic_BSSystem.dir/core.cpp.o" \
 "CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.o" \
-"CMakeFiles/WOlympic_BSSystem.dir/User.cpp.o"
+"CMakeFiles/WOlympic_BSSystem.dir/User.cpp.o" \
+"CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o" \
+"CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o"
 
 # External object files for target WOlympic_BSSystem
 WOlympic_BSSystem_EXTERNAL_OBJECTS =
@@ -187,9 +217,11 @@ WOlympic_BSSystem: CMakeFiles/WOlympic_BSSystem.dir/Commodity.cpp.o
 WOlympic_BSSystem: CMakeFiles/WOlympic_BSSystem.dir/core.cpp.o
 WOlympic_BSSystem: CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.o
 WOlympic_BSSystem: CMakeFiles/WOlympic_BSSystem.dir/User.cpp.o
+WOlympic_BSSystem: CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o
+WOlympic_BSSystem: CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o
 WOlympic_BSSystem: CMakeFiles/WOlympic_BSSystem.dir/build.make
 WOlympic_BSSystem: CMakeFiles/WOlympic_BSSystem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wzc/Desktop/study/Code/C++/WOlympic_BSSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable WOlympic_BSSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wzc/Desktop/study/Code/C++/WOlympic_BSSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable WOlympic_BSSystem"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WOlympic_BSSystem.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

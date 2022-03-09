@@ -2,13 +2,13 @@
 #include "head/Commodity.h"
 #include "head/Order.h"
 #include "head/User.h"
-extern Commodity com;
-extern Order ord;
-extern User use;
+extern Commodity *com;
+extern Order *ord;
+extern User *use;
 void SQL::read(string &cmd,int identity) {
     vector<string> res = split(cmd," ");
     if(res.at(0)=="INSERT"){
-        assert(res.size()==4&&"INSERT命令格式错误");
+        assert(res.size()==5&&"INSERT命令格式错误");
         res.at(4).erase(res.at(4).begin());
         res.at(4).erase(res.at(4).end()-1);
         INSERT(res.at(2),res.at(4),identity);
@@ -18,7 +18,7 @@ void SQL::read(string &cmd,int identity) {
         string::size_type pos=tem.find("=");
         string tem1 = tem.substr(0,pos);
         string tem2 = tem.substr(pos+1);
-        cout<<tem1<<" "<<tem2<<endl;
+//        cout<<tem1<<" "<<tem2<<endl;
         DELETE(res.at(2),tem2,tem1,identity);
     } else if(res.at(0)=="UPDATE"){
         assert(res.size()==6&&"UPDATE命令格式错误");
@@ -39,41 +39,44 @@ void SQL::read(string &cmd,int identity) {
     Log(cmd);
 }
 inline void SQL::Log(string &cmd){
+    ofstream history;
+    history.open(target,ios::app);
     history<<date<<" "<<TIME<<" "<<cmd<<endl;
+    history.close();
 }
 void SQL::INSERT(string &name, string &value, int identity) {
     if(name=="commodity"){
-        com.Insert(value,identity);
+        com->Insert(value,identity);
     } else if(name=="order"){
-        ord.Insert(value,identity);
+        ord->Insert(value,identity);
     } else if(name=="user"){
-        use.Insert(value,identity);
+        use->Insert(value,identity);
     }
 }
 void SQL::SELECT(string &name, string &value,string &attribute, int identity){
     if(name=="commodity"){
-        com.Select(value,attribute,identity);
+        suc = com->Select(value,attribute,identity);
     } else if(name=="order"){
-        ord.Select(value,attribute,identity);
+        suc = ord->Select(value,attribute,identity);
     } else if(name=="user"){
-        use.Select(value,attribute,identity);
+        suc = use->Select(value,attribute,identity);
     }
 }
 void SQL::DELETE(string &name, string &value, string &attribute, int identity) {
     if(name=="commodity"){
-        com.Delete(value,attribute,identity);
+        com->Delete(value,attribute,identity);
     } else if(name=="order"){
         cout<<"order.txt doesn't support DELETE"<<endl;
     } else if(name=="user"){
-        use.Delete(value,attribute,identity);
+        use->Delete(value,attribute,identity);
     }
 }
 void SQL::UPDATE(string &name, string &value, string &attribute, string &set, int identity) {
     if(name=="commodity"){
-        com.Update(value,attribute,set,identity);
+        com->Update(value,attribute,set,identity);
     } else if(name=="order"){
         cout<<"order.txt doesn't support UPDATE"<<endl;
     } else if(name=="user"){
-        cout<<"user.txt doesn't support UPDATE"<<endl;
+        use->Update(value,attribute,set,identity);
     }
 }

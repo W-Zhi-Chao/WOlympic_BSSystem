@@ -68,7 +68,10 @@ bool calculator::work(const char* expression){
         case SUC:
             calculate(transform(input));
             if(flag==ZERO_DIV) cout<<"有除0错误"<<endl;
-            else {cout<<"计算完成"<<endl; ret=true;}
+            else {
+                //cout<<"计算完成"<<endl;
+                ret=true;
+            }
             break;
     }
     memset(input,'\0',1000);

@@ -10,18 +10,15 @@ class SQL{
      * */
 public:
     bool suc;   // SQL_STATE
-    ofstream history;
+    char target[256];
     SQL(){
         suc=true;
     }
-    inline void Init(){
-        char dir[256];
-        strcpy(dir,pwd);
-        strcat(dir,"commands.txt");
-        history.open(dir,ios::out | ios::app);
+    void Init(){
+        strcpy(target,pwd);
+        strcat(target,"commands.txt");
     }
     inline void Exit(){
-        history.close();
     }
     void read(string &cmd,int identity);   // cmd check and call corresponding function
     inline void Log(string &cmd);

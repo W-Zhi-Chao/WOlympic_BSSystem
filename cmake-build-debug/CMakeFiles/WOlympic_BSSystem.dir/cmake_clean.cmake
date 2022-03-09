@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o"
+  "CMakeFiles/WOlympic_BSSystem.dir/Administrator.cpp.o.d"
   "CMakeFiles/WOlympic_BSSystem.dir/Commodity.cpp.o"
   "CMakeFiles/WOlympic_BSSystem.dir/Commodity.cpp.o.d"
   "CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.o"
   "CMakeFiles/WOlympic_BSSystem.dir/Order.cpp.o.d"
+  "CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o"
+  "CMakeFiles/WOlympic_BSSystem.dir/People.cpp.o.d"
   "CMakeFiles/WOlympic_BSSystem.dir/SQL.cpp.o"
   "CMakeFiles/WOlympic_BSSystem.dir/SQL.cpp.o.d"
   "CMakeFiles/WOlympic_BSSystem.dir/User.cpp.o"
